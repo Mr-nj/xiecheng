@@ -1,0 +1,160 @@
+@charset "utf-8";
+// 定义函数
+@function px2rem($px){
+    $rem:37.5px;
+    @return ($px / $rem) + rem;
+}
+body{
+    font-size: px2rem(12px);
+}
+.search-box{
+    display: none;
+}
+.nav{
+    height: px2rem(44px);
+    background: #e6f0f7;
+    form{
+        padding: px2rem(0px) px2rem(50px) px2rem(0px) px2rem(45px);
+        position: relative;
+        height: px2rem(44px);
+        
+        >span{
+            display: block;
+            width: px2rem(45px);
+            height: px2rem(44px);
+            position: absolute;
+            left: 0;
+            top: 0;
+            &::before{
+            content: '';
+            display:block;
+            width: px2rem(12px);
+            height: px2rem(12px);
+            border-left: 2px solid #8a9094;
+            border-bottom: 2px solid #8a9094;
+            transform: rotate(45deg);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: px2rem(-7px) 0 0 px2rem(-6px);        
+            }
+        }
+        .search-box{
+            height: px2rem(30px);
+            padding: px2rem(7px) 0;
+            position: absolute;
+            input{
+                width: px2rem(218px);
+                height: px2rem(30px);
+                padding: px2rem(0px) px2rem(32px) px2rem(0px) px2rem(30px);
+                outline: none;
+                border: none;
+                background-color: #fff;
+                background-image: url(../images/search.png);
+                background-repeat: no-repeat;
+                background-position: px2rem(7px) center;
+                background-size: px2rem(15px) px2rem(15px);
+                opacity: .8;
+            }
+            span::before{
+                content: '×';
+                display: inline-block;
+                position: absolute;
+                color: rgb(161, 161, 161);
+                font-size: px2rem(25px);
+                width: px2rem(28px);
+                height: px2rem(28px);
+                right: 0;
+                text-align: center;
+                line-height: 28px;
+                top: px2rem(8px);
+            }
+        }
+        button{
+            width: px2rem(50px);
+            height: px2rem(44px);
+            position: absolute;
+            right: 0;
+            font-size: px2rem(15px);
+            bottom: 0;
+            border: none;
+            background: none;
+            color: #099fde;
+        }
+    }
+}
+
+.main{
+    .logo{
+        font: normal 16px/1.5 Arial,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei;
+        color: #333;
+        height:px2rem(50px);
+        line-height:px2rem(50px);
+        border: 1px solid #DDD;
+        >div{
+            width: px2rem(40px);
+            height: px2rem(40px);
+            background-image: url(../images/un_icon_ctrip.png);
+            background-repeat: no-repeat;
+            float: left;
+            margin:px2rem(5px) px2rem(10px)
+        }
+        p{
+            span{
+                color: #ff6600;
+                font-weight: 400;
+                font-size: px2rem(18px);
+            }
+        }
+    }
+    .hot-search{
+        p{
+            margin: px2rem(8px) px2rem(15px) px2rem(2px);
+            font-size: px2rem(13px);
+            color: rgb(51, 51, 51);
+        }
+        ul{
+            li:nth-child(1){
+                border-top: 1px solid #ddd;
+            }
+            li{
+                padding: px2rem(10px) px2rem(35px);
+                font-size: px2rem(16px);
+                background-color: #fff;
+                border-bottom:1px solid #ddd;
+                position: relative;
+                span{
+                    display: inline-block;
+                    width: px2rem(35px);
+                    height: px2rem(44px);
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    &::before{
+                        content: '';
+                        display: block;
+                        width: px2rem(10px);
+                        height: px2rem(9px);
+                        border-left: px2rem(2px) solid #ccc;
+                        border-top: px2rem(2px) solid #ccc;
+                        position: absolute;
+                        top: px2rem(16px);
+                        left: px2rem(13px);
+                    }
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: px2rem(15px);
+                        height: px2rem(2px);
+                        background-color: #ccc;
+                        position: absolute;
+                        top: px2rem(22px);
+                        left: px2rem(12px);
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+}
+

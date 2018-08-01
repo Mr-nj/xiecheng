@@ -1,0 +1,94 @@
+body {
+  background: #fff;
+}
+
+.nav {
+  width: 100%;
+  height: 1.30667rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  font-size: 0.4rem;
+}
+
+.nav span {
+  width: 1.44rem;
+  height: 1.17333rem;
+}
+
+.nav .back {
+  background: url(../images/arrow-black.png) no-repeat center;
+  background-size: 0.58667rem 0.58667rem;
+  transform: rotate(90deg);
+  opacity: .5;
+}
+
+.nav .map {
+  background: url(../images/map.png) no-repeat center;
+  background-size: 0.64rem 0.64rem;
+}
+
+.nav .search {
+  width: 7.12rem;
+  height: 0.88rem;
+  background: #ECECEC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0.88rem;
+}
+
+.nav .search .local {
+  width: 1.12rem;
+  height: 0.88rem;
+  padding-left: 0.21333rem;
+  padding-right: 0.32rem;
+  position: relative;
+}
+
+.nav .search .local i::after {
+  content: " ";
+  position: absolute;
+  right: 0.16rem;
+  top: 0.4rem;
+  border: 4px solid #868686;
+  border-color: #868686 transparent transparent transparent;
+  border-top-width: 0.13333rem;
+  width: 0;
+  height: 0.05333rem;
+  margin-left: 0.13333rem;
+  vertical-align: 0.08rem;
+}
+
+.nav .search .line {
+  width: 0.02667rem;
+  height: 0.4rem;
+  background: #a8a8a8;
+}
+
+.nav .search .inp {
+  width: 5.28rem;
+  height: 0.88rem;
+  padding-left: 0.18667rem;
+  color: #a3a8ab;
+  display: flex;
+  align-items: center;
+  line-height: 0.88rem;
+  font-size: 0.37333rem;
+}
+
+.nav .search .inp span {
+  width: 4rem;
+  height: 0.88rem;
+}
+
+.nav .search .inp i {
+  width: 0.58667rem;
+  height: 0.58667rem;
+  display: inline-block;
+  background: url(../images/search@3x.png) no-repeat center;
+  background-size: 0.42667rem;
+  opacity: .5;
+  margin-right: 0.10667rem;
+}
